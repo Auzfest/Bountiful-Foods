@@ -10,8 +10,20 @@ document.getElementById('fruitForm').onsubmit = function(event) {
     return true; // Allow form submission
 };
 
+const linksURL = "https://auzfest.github.io/Bountiful-Foods/data/links.json";
 
-const url = "https://www.fruityvice.com/api/fruit/all";
+
+async function getFruit() {
+  const response = await fetch(linksURL);
+  const data = await response.json();
+  console.log(data);
+/*   displayLinks(data);
+ */}
+
+getFruit();
+
+
+/* const url = "https://www.fruityvice.com/api/fruit/all";
 
 async function apiFetch() {
     try {
@@ -19,8 +31,8 @@ async function apiFetch() {
       if (response.ok) {
         const data = await response.json();
         console.log(data);
-/*         displayResults(data);
- */      } else {
+        displayResults(data);
+      } else {
           throw Error(await response.text());
       }
     } catch (error) {
@@ -29,3 +41,4 @@ async function apiFetch() {
   }
 
 apiFetch();
+ */
