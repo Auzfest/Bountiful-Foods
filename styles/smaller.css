@@ -2,7 +2,7 @@
     :root {
         --primary-color: #FF206e;
         --secondary-color:#08B2E3;
-        --color-three: #57A773;
+        --color-three: #56ca7e;
         --color-four: #fff;
         --color-five: #000;
     }
@@ -36,6 +36,12 @@
     form {
         margin-left: 1rem;
         margin-right: 1rem;
+    }
+
+    #fruitContainer {
+        text-align: center;
+        display: grid;
+        grid-template-columns: 0.5fr 0.5fr;
     }
 
     .confirminfo {

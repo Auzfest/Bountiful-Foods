@@ -10,35 +10,65 @@ document.getElementById('fruitForm').onsubmit = function(event) {
     return true; // Allow form submission
 };
 
-const linksURL = "https://auzfest.github.io/Bountiful-Foods/data/links.json";
-
+const linksURL = "https://auzfest.github.io/Bountiful-Foods/data/fruits.json";
+const fruitContainer = document.querySelector('#fruitContainer');
 
 async function getFruit() {
   const response = await fetch(linksURL);
   const data = await response.json();
   console.log(data);
-/*   displayLinks(data);
- */}
+  displayFruit(data);
+}
+
+/* function displayFruit(data) {
+  data.forEach(fruit => {
+    const fruitLabel = document.createElement('label');
+    const fruitInput = document.createElement('input');
+
+    fruitInput.setAttribute("type", "checkbox");
+    fruitInput.setAttribute("id", fruit.id);
+    fruitInput.setAttribute("name","fruit");
+    fruitInput.setAttribute("value", fruit.name);
+    fruitInput.textContent = fruit.name;
+
+    fruitContainer.append(fruitInput)
+
+    fruitLabel.setAttribute('for', fruit.id);
+    fruitLabel.textContent = fruit.name;
+
+    fruitContainer.append(fruitLabel);
+    fruitContainer.append(document.createElement('br'));
+  });
+} */
+
+function displayFruit(data) {
+  data.forEach(fruit => {
+    const fruitLabel = document.createElement('label');
+    const fruitInput = document.createElement('input');
+
+    // Set attributes for the checkbox
+    fruitInput.setAttribute("type", "checkbox");
+    fruitInput.setAttribute("id", fruit.id);
+    fruitInput.setAttribute("name", "fruit");
+    fruitInput.setAttribute("value", fruit.name);
+    
+    // Create a div to wrap input and label, making it easier to manage in grid
+    const fruitDiv = document.createElement('div');
+
+    // Append input to the wrapper div
+    fruitDiv.append(fruitInput);
+
+    // Set label attributes and append it to the wrapper div
+    fruitLabel.setAttribute('for', fruit.id);
+    fruitLabel.textContent = fruit.name;
+    fruitDiv.append(fruitLabel);
+
+    // Append the wrapper div to the fruitContainer, each acting as a grid item
+    fruitContainer.append(fruitDiv);
+  });
+}
+
 
 getFruit();
 
 
-/* const url = "https://www.fruityvice.com/api/fruit/all";
-
-async function apiFetch() {
-    try {
-      const response = await fetch(url);
-      if (response.ok) {
-        const data = await response.json();
-        console.log(data);
-        displayResults(data);
-      } else {
-          throw Error(await response.text());
-      }
-    } catch (error) {
-        console.log(error);
-    }
-  }
-
-apiFetch();
- */

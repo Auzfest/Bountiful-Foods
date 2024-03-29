@@ -98,7 +98,7 @@ nav {
 
 @media screen and (max-width: 600px) {
 .navigation a {
-    font-family: 'unbound';
+    font-family: 'unbounded';
     display: none;
     padding: 1rem;
     color: var(--color-five);
@@ -210,6 +210,8 @@ main {
 }
 
 footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     background-color: var(--primary-color);
     padding: 85px;
 }
@@ -218,6 +220,10 @@ footer a {
     color: var(--color-five);
     text-decoration: none;
     padding: 5%;
+}
+
+footer a:hover {
+    color: var(--color-four);
 }
 
 /*Order*/
@@ -234,7 +240,7 @@ form {
 }
 
 form div {
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 /*Order Confirmation*/
