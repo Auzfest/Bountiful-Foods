@@ -1,0 +1,248 @@
+@font-face {
+    font-family: 'unbounded';
+    src: url('../Unbounded/static/Unbounded-Black.ttf') format('truetype');
+}
+
+:root {
+    --primary-color: #FF206e;
+    --secondary-color:#08B2E3;
+    --color-three: #56ca7e;
+    --color-four: #fff;
+    --color-five: #000;
+}
+
+body {
+    font-family: "unbounded";
+    margin: 0;
+}
+
+header {
+    padding-top: 2%;
+    background: linear-gradient(to bottom, var(--primary-color) 0%, var(--color-three) 75%);
+}
+
+.headerGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 3rem;
+}
+
+.headerGrid img {
+    grid-column: 1/2;
+}
+
+.headerGrid h1 {
+    grid-column: 2/3;
+}
+
+#menu {
+    position: relative;
+    grid-column: 4/5;
+    grid-row: 2/3;
+    margin-left: 2%;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+#menu input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 10%;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+nav {
+    background-color: var(--color-three);
+}
+
+@media screen and (max-width: 600px) {
+.navigation a {
+    font-family: 'unbound';
+    display: none;
+    padding: 1rem;
+    color: var(--color-five);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+}
+
+nav a:hover{
+/*     background-color: var(--secondary-color);*/ 
+    background-image: radial-gradient(var(--secondary-color) 35%, var(--color-three), var(--color-three));
+    color: #07090F;
+}
+
+nav.open {
+    display: flex;
+    flex-direction: row;
+	list-style: none;
+    transition: all 0.3s ease;
+}
+
+.open a {
+	display: block;
+}
+
+main {
+    background: linear-gradient(to top, var(--primary-color) 0%, var(--color-four) 10% 95%, var(--color-three) 100%);
+    margin-top: -5px;
+    text-align: center;
+}
+
+.contentGrid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr; /* temporary*/
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.locations {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-left: 2%;
+
+}
+
+.orderHome {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    text-align: center;
+    background-color: var(--primary-color);
+    border: var(--primary-color) 5px solid;
+    border-radius: 5%;
+    margin-top: 2%;
+    margin-right: 4%;
+    box-shadow: 5px 5px 0px 5px rgba(0, 0, 0, 0.6);
+}
+
+.orderNow {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-image: url(../images/fruitSquared.webp);
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 2%;
+    justify-content: center;
+    padding-top: 15%;
+    border-radius: 5%;
+}
+
+.orderNow h2 {
+    background-color: var(--color-three);
+    padding: 1rem;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 10%;
+    box-shadow: 5px 5px 0px 5px rgba(0, 0, 0, 0.6);
+}
+
+.orderNow button {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 10%;
+    border: none;
+    box-shadow: 5px 5px 0px 5px rgba(0, 0, 0, 0.6);
+}
+
+.orderNow button:hover {
+    background-color: var(--primary-color);
+    box-shadow: none;
+    transition: all 0.3s ease;
+}
+
+.orderNow a {
+    color: var(--color-five);
+    text-decoration: none;
+}
+
+.weather {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    text-align: center;
+    margin-top: 5%;
+    margin-right: 4%;
+    background-color: var(--secondary-color);
+    border-radius: 5%;
+    padding: 1rem;
+    box-shadow: 5px 5px 0px 5px rgba(0, 0, 0, 0.6);
+}
+
+footer {
+    background-color: var(--primary-color);
+    padding: 85px;
+}
+
+footer a {
+    color: var(--color-five);
+    text-decoration: none;
+    padding: 5%;
+}
+
+/*Order*/
+
+.spacer {
+    padding: 5%;
+}
+
+form {
+    text-align: center;
+    padding-top: 2%;
+    border: #000 solid;
+    border-radius: 10%;
+}
+
+form div {
+    padding: 1rem;
+}
+
+/*Order Confirmation*/
+
+.confirminfo {
+    text-align: center;
+    border: #000 solid;
+    border-radius: 10%;
+}
+
+/*About*/

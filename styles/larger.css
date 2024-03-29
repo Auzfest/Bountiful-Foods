@@ -1,0 +1,47 @@
+@media screen and (min-width: 600px) {
+    :root {
+        --primary-color: #FF206e;
+        --secondary-color:#08B2E3;
+        --color-three: #57A773;
+        --color-four: #fff;
+        --color-five: #000;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .slider {
+        display: none;
+    }
+    
+    .navigation {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .navigation a {
+        display: flex;
+        padding: 1rem;
+        color:var(--color-five);
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+
+    form {
+        margin-left: 20%;
+        margin-right: 20%;
+        text-align: center;
+        border: #000 solid;
+        border-radius: 10%;
+    }
+
+    .confirminfo {
+        text-align: center;
+        border: #000 solid;
+        border-radius: 10%;
+        margin-left: 10rem;
+        margin-right: 10rem;
+    }
+}

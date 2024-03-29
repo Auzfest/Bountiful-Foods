@@ -1,0 +1,45 @@
+@media screen and (max-width: 600px) {
+    :root {
+        --primary-color: #FF206e;
+        --secondary-color:#08B2E3;
+        --color-three: #57A773;
+        --color-four: #fff;
+        --color-five: #000;
+    }
+
+    .contentGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .locations {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .orderHome {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    .orderNow {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .weather {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+
+    form {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .confirminfo {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
