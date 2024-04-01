@@ -47,7 +47,12 @@
         text-align: center;
         border: #000 solid;
         border-radius: 10%;
-        margin-left: 10rem;
-        margin-right: 10rem;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    iframe {
+        width: 40%;
+        height: 30rem;
     }
 }

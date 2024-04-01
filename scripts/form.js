@@ -3,11 +3,12 @@ document.getElementById('fruitForm').onsubmit = function(event) {
 
     if (checkboxes.length < 3) {
         document.getElementById('error-message').textContent = 'Please select at least 3 fruits.';
-        event.preventDefault(); // Prevent form submission
+        event.preventDefault(); 
         return false;
     }
-    document.getElementById('error-message').textContent = ''; // Clear error message
-    return true; // Allow form submission
+    document.getElementById('error-message').textContent = ''; 
+    incrementDrinkCount();
+    return true; 
 };
 
 const linksURL = "https://auzfest.github.io/Bountiful-Foods/data/fruits.json";
@@ -16,30 +17,8 @@ const fruitContainer = document.querySelector('#fruitContainer');
 async function getFruit() {
   const response = await fetch(linksURL);
   const data = await response.json();
-  console.log(data);
   displayFruit(data);
 }
-
-/* function displayFruit(data) {
-  data.forEach(fruit => {
-    const fruitLabel = document.createElement('label');
-    const fruitInput = document.createElement('input');
-
-    fruitInput.setAttribute("type", "checkbox");
-    fruitInput.setAttribute("id", fruit.id);
-    fruitInput.setAttribute("name","fruit");
-    fruitInput.setAttribute("value", fruit.name);
-    fruitInput.textContent = fruit.name;
-
-    fruitContainer.append(fruitInput)
-
-    fruitLabel.setAttribute('for', fruit.id);
-    fruitLabel.textContent = fruit.name;
-
-    fruitContainer.append(fruitLabel);
-    fruitContainer.append(document.createElement('br'));
-  });
-} */
 
 function displayFruit(data) {
   data.forEach(fruit => {
@@ -68,6 +47,11 @@ function displayFruit(data) {
   });
 }
 
+    // Increment and save the new count to Local Storage
+function incrementDrinkCount() {
+  let count = parseInt(localStorage.getItem('drinkCount') || 0);
+  localStorage.setItem('drinkCount', ++count);
+}
 
 getFruit();
 

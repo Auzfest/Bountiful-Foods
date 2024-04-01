@@ -7,21 +7,22 @@
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/smaller.css">
+    <link rel="icon" href="images/favicon.ico">
     <title>Bountiful Foods</title>
 </head>
 <body>
     <header>
         <div class="headerGrid">
         <a href="index.html">
-            <img src="images/.webp" srcset="images/.webp" alt="Bountiful Foods Logo"> 
+            <img src="images/BountifulFoodsLogo.webp" srcset="images/BountifulFoodsLogo.webp" alt="Bountiful Foods Logo"> 
         </a>
         <h1>Bountiful Foods</h1>
+        <p>Fresh Fruit and Fresh Drinks!</p>
         </div>
            <label id="menu" title="Navigation">
                 <input type="checkbox" id="checkbox">
                 <span class="slider"></span>
             </label>
-        </div>
         <nav class="navigation">
             <a href="index.html">Home</a>
             <a href="order.html">Order</a>
@@ -33,14 +34,23 @@
             <div class="locations">
             <h2>Locations</h2>
             <h3>Vista</h3>
-            <img src="#" alt="Picture of Vista">
-            <p>bhlgfjhgfdfjkgfhglj</p>
+            <img srcset="images/Vista.webp" alt="Picture of Vista">
+            <p>Vista, known as "America's Climatic Wonderland," enjoys a Mediterranean climate, characterized by mild, 
+                wet winters and warm, dry summers. Its location just 7 miles inland from the Pacific Ocean contributes to its moderate weather, 
+                making it an attractive place for those who enjoy outdoor activities year-round.
+            </p>
             <h3>Encinitas</h3>
-            <img src="#" alt="Picture of Encinitas">
-            <p>bhlgfjhgfdfjkgfhglj</p>
+            <img srcset="images/Encinitas.webp" alt="Picture of Encinitas">
+            <p>Encinitas, nestled along the coast in San Diego County, is celebrated for its natural beauty and mild Mediterranean climate.
+                 With temperatures rarely dropping below 40°F or rising above 85°F, Encinitas offers an idyllic setting for beach activities, 
+                 gardening, and surfing, complemented by breathtaking coastal vistas and lush landscapes.
+            </p>
             </div>
             <div class="orderHome">
                 <h2>Your Orders</h2>
+                <div class="spacer"></div>
+                <p>In the past you have ordered:</p>
+                <div id="drinkCount"></div>
             </div>
             <div class="orderNow">
                 <h2>Make Your Own Below!</h2>
@@ -74,5 +84,6 @@
     </footer>
     <script src="scripts/hamburger.js"></script>
     <script src="scripts/weather.js"></script>
+    <script src="scripts/orderCount.js"></script>
 </body>
 </html>
