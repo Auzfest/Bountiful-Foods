@@ -301,7 +301,7 @@ h2 {
 
 .aboutGrid {
     display: grid;
-    grid-template-columns: 1f 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     text-align: center;
 }

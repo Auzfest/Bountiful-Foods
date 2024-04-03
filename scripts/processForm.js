@@ -19,11 +19,11 @@ function formatDate(date) {
     };
     return date.toLocaleString('en-US', options);}
 
-const currentDate = new Date(); // Get the current date and time
-const futureDate = new Date(currentDate.getTime() + 30 * 60000); // Add 30 minutes to the current time
+const date = new Date(); // Get the current date and time
+const futureDate = new Date(date.getTime() + 30 * 60000); // Add 30 minutes to the current time
 
 // Format the dates for display
-const formattedCurrentDate = formatDate(currentDate);
+const formattedCurrentDate = formatDate(date);
 const formattedFutureDate = formatDate(futureDate);
 
 orderDate.textContent = `Time of Order: ${formattedCurrentDate}`;
