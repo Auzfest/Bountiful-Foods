@@ -102,6 +102,8 @@ getFruit();
 
 document.querySelector("#firstName").textContent = formData.get('firstName');
 document.querySelector("#email").textContent = formData.get('email');
+document.querySelector("#phone").textContent = formData.get('phone');
+
 
 const fruits = formData.getAll('fruit');
 document.querySelector("#fruit").textContent = fruits.join(', ');
