@@ -108,7 +108,7 @@ nav {
     background-color: var(--color-three);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
 .navigation a {
     font-family: 'unbounded';
     display: none;
@@ -199,27 +199,25 @@ main {
     padding: 1rem;
     margin-left: 25%;
     margin-right: 25%;
+    margin-bottom: 5rem;
     border-radius: 10%;
     box-shadow: 5px 5px 0px 5px rgba(0, 0, 0, 0.6);
 }
 
-.orderNow button {
+.orderNow a {
     background-color: var(--secondary-color);
     padding: 1rem;
     border-radius: 10%;
     border: none;
     box-shadow: 5px 5px 0px 5px rgba(0, 0, 0, 0.6);
+    color: var(--color-five);
+    text-decoration: none;
 }
 
-.orderNow button:hover {
+.orderNow a:hover {
     background-color: var(--primary-color);
     box-shadow: none;
     transition: all 0.3s ease;
-}
-
-.orderNow a {
-    color: var(--color-five);
-    text-decoration: none;
 }
 
 .weather {
